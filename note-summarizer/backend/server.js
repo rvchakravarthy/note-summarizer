@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const OpenAI = require("openai"); 
+const OpenAI = require("openai");
 
 dotenv.config();
 
@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // Ensure .env contains this variable
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 app.post("/summarize", async (req, res) => {
